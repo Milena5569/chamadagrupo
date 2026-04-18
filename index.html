@@ -671,446 +671,194 @@
       font-weight: 400;
     }
 
-    /* Responsive - Tablet */
-    @media (max-width: 900px) {
-      .main-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+    /* Mobile - Layout de 1 coluna (empilhado verticalmente) */
+    @media (max-width: 768px) {
+      /* Reset de altura */
+      html, body { height: auto !important; }
+      body { overflow: auto !important; }
 
-      .hero-image-section {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .hero-photo-block {
-        max-width: 100%;
-      }
-
-      .benefits-row {
-        flex-wrap: wrap;
-      }
-
-      body { overflow: auto; }
-      html, body { height: auto; }
-      .container { height: auto; padding: 32px 16px 48px; }
-    }
-
-    /* Mobile - Layout compacto parecido com desktop */
-    @media (max-width: 560px) {
-      /* Body compacto - menos scroll desnecessário */
-      body {
-        padding-bottom: 140px;
-      }
-
+      /* Container */
       .container {
-        padding: 16px 12px 32px;
+        height: auto !important;
+        padding: 32px 16px 48px !important;
+        min-height: auto !important;
       }
 
-      /* Hero section ultra compacta */
+      /* Main Grid - 1 coluna */
+      .main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      /* Hero Section */
       .hero-section {
-        padding: 14px 12px;
-        border-radius: 14px;
+        padding: 24px 16px !important;
       }
 
-      /* Badges bem compactos */
       .hero-top {
-        gap: 4px;
-        margin-bottom: 8px;
-        flex-wrap: wrap;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
       }
 
-      .curiosity-badge,
-      .badge,
-      .urgency-bar {
-        font-size: 0.62rem;
-        padding: 3px 8px;
-        gap: 3px;
-      }
-
-      /* Título forte mas mais compacto */
       h1 {
-        font-size: 1.35rem;
-        margin-bottom: 6px;
-        line-height: 1.15;
-        letter-spacing: -0.02em;
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
       }
 
-      /* Lead e sub bem compactos */
       .lead {
-        font-size: 0.82rem;
-        margin-bottom: 4px;
-        line-height: 1.45;
+        font-size: 0.95rem !important;
+        margin-bottom: 8px !important;
       }
 
       .sub {
-        font-size: 0.72rem;
-        margin-bottom: 10px;
+        font-size: 0.85rem !important;
+        margin-bottom: 14px !important;
       }
 
-      /* Stats row - 2 colunas bem compactas */
+      /* Stats Row - empilhado */
       .stats-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6px;
-        margin-bottom: 10px;
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin-bottom: 16px !important;
       }
 
       .stat-mini {
-        padding: 6px 8px;
-        font-size: 0.7rem;
-        border-radius: 10px;
+        width: 100% !important;
       }
 
-      .stat-mini:nth-child(1) {
-        grid-column: span 2;
-        text-align: center;
-      }
-
-      .stat-mini strong {
-        font-size: 0.95rem;
-      }
-
-      .stat-mini span {
-        font-size: 0.62rem;
-      }
-
-      /* CTA buttons - empilhados mas compactos */
+      /* CTA Row - empilhado */
       .cta-row {
-        flex-direction: column;
-        gap: 6px;
-        margin-bottom: 8px;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
       }
 
       .btn {
-        width: 100%;
-        min-height: 42px;
-        font-size: 0.82rem;
-        border-radius: 999px;
-        padding: 0 16px;
+        width: 100% !important;
       }
 
-      .btn-primary {
-        font-size: 0.85rem;
-        min-height: 44px;
-      }
-
-      /* Microcopy bem compacto */
-      .cta-microcopy {
-        flex-wrap: wrap;
-        gap: 4px;
-        margin-top: 6px;
-      }
-
-      .cta-microcopy span {
-        font-size: 0.6rem;
-      }
-
-      /* Countdown inline compacto */
-      .countdown-inline {
-        margin-top: 6px;
-        font-size: 0.68rem;
-        gap: 4px;
-      }
-
-      .countdown-inline .time {
-        font-size: 0.9rem;
-      }
-
-      .countdown-inline .label {
-        font-size: 0.65rem;
-        padding: 2px 6px;
-      }
-
-      .note {
-        font-size: 0.62rem;
-        margin-top: 6px;
-      }
-
-      /* Main CTA Block - compacto */
-      .main-cta-block {
-        padding: 12px 10px;
-        margin-top: 8px;
-        border-radius: 12px;
-      }
-
-      .cta-block-title {
-        font-size: 0.85rem;
-        margin-bottom: 3px;
-      }
-
-      .cta-block-subtitle {
-        font-size: 0.68rem;
-        margin-bottom: 8px;
-        line-height: 1.35;
-      }
-
-      .cta-block-btn {
-        min-height: 42px;
-        font-size: 0.82rem;
-      }
-
-      .cta-block-microcopy {
-        gap: 6px;
-        margin-top: 8px;
-      }
-
-      .cta-block-microcopy span {
-        font-size: 0.6rem;
-      }
-
-      .cta-block-urgency {
-        font-size: 0.6rem;
-        margin-top: 4px;
-      }
-
-      /* Activity Feed - ultra compacto */
-      .activity-feed {
-        padding: 10px;
-        margin-top: 8px;
-        border-radius: 12px;
-      }
-
-      .feed-title {
-        font-size: 0.75rem;
-        margin-bottom: 6px;
-      }
-
-      .feed-grid {
-        gap: 4px;
-      }
-
-      .feed-card {
-        padding: 6px;
-        border-radius: 8px;
-      }
-
-      .feed-avatar {
-        width: 20px;
-        height: 20px;
-        font-size: 0.5rem;
-      }
-
-      .feed-time {
-        font-size: 0.5rem;
-      }
-
-      .feed-bubble {
-        font-size: 0.62rem;
-        line-height: 1.35;
-      }
-
-      .feed-urgent {
-        font-size: 0.62rem;
-      }
-
-      .feed-warn {
-        font-size: 0.55rem;
-      }
-
-      .feed-old, .feed-new {
-        font-size: 0.6rem;
-      }
-
-      /* Hero Image Section - grid 2 colunas bem compacto */
+      /* Hero Image Section - FLEX COLUMN, não grid! */
       .hero-image-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin-top: 8px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        position: static !important;
+        width: 100% !important;
       }
 
       .hero-photo-block {
-        border-radius: 12px;
-        overflow: hidden;
+        max-width: 100% !important;
+        width: 100% !important;
       }
 
-      .hero-photo-info {
-        padding: 6px 8px;
-      }
-
-      .hero-photo-name {
-        font-size: 0.78rem;
-        margin-bottom: 1px;
-      }
-
-      .hero-photo-role {
-        font-size: 0.62rem;
-        margin-bottom: 4px;
-      }
-
-      .hero-photo-status {
-        font-size: 0.6rem;
-        padding: 3px 6px;
-        gap: 3px;
-      }
-
-      .hero-photo-status-dot {
-        width: 5px;
-        height: 5px;
-      }
-
-      /* Mock WhatsApp - bem compacto */
+      /* Mock WhatsApp - largura total */
       .mock-mini {
-        padding: 8px;
-        border-radius: 12px;
+        width: 100% !important;
+        max-width: 100% !important;
       }
 
-      .mock-header {
-        gap: 4px;
-        padding-bottom: 6px;
-        margin-bottom: 6px;
-      }
-
-      .mock-avatar {
-        width: 24px;
-        height: 24px;
-        font-size: 0.6rem;
-      }
-
-      .mock-title {
-        font-size: 0.68rem;
-      }
-
-      .mock-subtitle {
-        font-size: 0.55rem;
-      }
-
-      .mock-msg {
-        padding: 5px 8px;
-        font-size: 0.62rem;
-        margin-bottom: 4px;
-        border-radius: 10px;
-      }
-
-      .mock-price {
-        font-size: 0.68rem;
-      }
-
-      .mock-old-price {
-        font-size: 0.58rem;
-      }
-
-      .mock-urgency {
-        font-size: 0.62rem;
-      }
-
-      .mock-time {
-        font-size: 0.48rem;
-        margin-top: 2px;
-      }
-
-      /* Social Proof - compacto */
+      /* Social Proof - largura total */
       .social-proof {
-        padding: 10px;
-        border-radius: 12px;
+        width: 100% !important;
       }
 
-      .stars {
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-        letter-spacing: 1px;
-      }
-
-      .social-proof strong {
-        font-size: 0.72rem;
-      }
-
-      .social-proof .sub-text {
-        font-size: 0.62rem;
-        margin-top: 1px;
-      }
-
-      .testimonials {
-        gap: 4px;
-        margin-top: 6px;
-      }
-
-      .testimonial-item {
-        font-size: 0.62rem;
-        padding: 5px 8px;
-        border-radius: 8px;
-        gap: 4px;
-      }
-
-      .testimonial-item .t-icon {
-        font-size: 0.7rem;
-      }
-
-      /* Benefits row - 3 colunas bem compactas */
+      /* Benefits Row - 2 colunas máximo */
       .benefits-row {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-        margin-top: 8px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        margin-top: 16px !important;
       }
 
       .benefit-item {
-        padding: 8px 4px;
-        border-radius: 10px;
+        flex: 1 1 calc(50% - 5px) !important;
+        max-width: calc(50% - 5px) !important;
       }
 
-      .benefit-item .icon {
-        font-size: 1rem;
-        margin-bottom: 2px;
+      /* Activity Feed - 1 coluna */
+      .feed-grid {
+        grid-template-columns: 1fr !important;
       }
 
-      .benefit-item strong {
-        font-size: 0.62rem;
+      /* Chat Grid - 1 coluna */
+      .chat-grid {
+        grid-template-columns: 1fr !important;
       }
 
-      .benefit-item span {
-        font-size: 0.52rem;
+      /* Prints Grid - 1 coluna */
+      .prints-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Stats Bar - empilhado */
+      .stats-bar {
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      /* Feed Grid - 1 coluna */
+      .feed-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
       }
 
       /* Toast - posição ajustada */
       .floating-toast {
-        bottom: 100px;
-        font-size: 0.65rem;
-        padding: 6px 12px;
-        max-width: 85%;
+        bottom: 80px !important;
+        max-width: 90% !important;
+        font-size: 0.78rem !important;
+        padding: 10px 16px !important;
       }
 
-      /* Final CTA Section - compacto */
+      /* CTA Final Section */
       .cta-final-section {
-        padding: 16px 0 24px;
+        padding: 24px 0 40px !important;
       }
 
       .cta-final-wrapper {
-        padding: 0 12px;
+        padding: 0 16px !important;
       }
 
       .cta-final-box {
-        padding: 14px 12px;
-        border-radius: 14px;
-      }
-
-      .cta-final-title {
-        font-size: 0.88rem;
-        margin-bottom: 4px;
-      }
-
-      .cta-final-subtitle {
-        font-size: 0.68rem;
-        margin-bottom: 10px;
-        line-height: 1.4;
+        padding: 24px 16px !important;
       }
 
       .cta-final-btn {
-        min-height: 42px;
-        font-size: 0.82rem;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* Ajustes adicionais para tablets */
+    @media (min-width: 769px) and (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
       }
 
-      .cta-final-proof span {
-        font-size: 0.62rem;
+      .hero-image-section {
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
       }
 
-      .cta-final-urgency {
-        font-size: 0.6rem;
-        margin-top: 6px;
+      .hero-photo-block {
+        max-width: 400px !important;
+        margin: 0 auto !important;
       }
+
+      .benefits-row {
+        flex-wrap: wrap !important;
+      }
+
+      .benefit-item {
+        flex: 1 1 calc(33.333% - 10px) !important;
+      }
+
+      body { overflow: auto !important; }
+      html, body { height: auto !important; }
+      .container { height: auto !important; padding: 40px 20px 60px !important; }
     }
 
     /* Body padding for marquee */
