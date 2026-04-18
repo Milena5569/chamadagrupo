@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre no grupo VIP de ofertas e receba promoções direto no WhatsApp." />
+  <title>ClickVendas | Achadinhos🥰</title>
+  <style>
+    :root {
+      --bg: #fff4f8;
+      --bg-soft: #ffe6ef;
+      --panel: rgba(255,255,255,0.85);
+      --panel-2: rgba(255,255,255,0.7);
+      --line: rgba(227,112,159,0.25);
+      --text: #7a2952;
+      --muted: #9c5b78;
+      --primary: #ff6fa9;
+      --primary-dark: #f25595;
+      --primary-glow: rgba(255,111,169,0.4);
+      --accent: #ff9cc4;
+      --accent-2: #ffc6dc;
+      --shadow: 0 16px 48px rgba(226, 119, 164, 0.18);
+      --shadow-hover: 0 20px 56px rgba(226, 119, 164, 0.28);
+      --radius: 20px;
+      --radius-sm: 14px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 170, 204, 0.35), transparent 22%),
+        radial-gradient(circle at 85% 15%, rgba(255, 196, 218, 0.45), transparent 25%),
+        linear-gradient(180deg, var(--bg) 0%, #ffeef5 100%);
+      overflow: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 24px), var(--max));
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 0 80px;
+    }
+
+    .glass {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* Curiosity Badge - Top */
+    .curiosity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255,68,102,0.12), rgba(255,111,169,0.08));
+      border: 1px solid rgba(255,68,102,0.2);
+      color: #e63946;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      animation: curiosityPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes curiosityPulse {
+      0%, 100% { transform: scale(1); box-shadow: none; }
+      50% { transform: scale(1.03); box-shadow: 0 4px 16px rgba(230,57,70,0.15); }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,111,169,0.12);
+      border: 1px solid rgba(255,111,169,0.25);
+      color: var(--primary-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .urgency-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255,85,149,0.12);
+      border: 1px solid rgba(255,85,149,0.2);
+      font-size: 0.78rem;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .urgency-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ff4488;
+      animation: blink 1.5s infinite;
+      box-shadow: 0 0 8px rgba(255,68,136,0.5);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Main Grid Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero-section {
+      padding: 32px;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .lead {
+      font-size: clamp(0.92rem, 1.3vw, 1.08rem);
+      margin: 0 0 12px;
+      line-height: 1.55;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .sub {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0 0 18px;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stat-mini {
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,111,169,0.18);
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stat-mini:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,111,169,0.12);
+    }
+
+    .stat-mini strong {
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .stat-mini span {
+      color: var(--muted);
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* CTA Buttons */
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: 0;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+    }
+
+    .btn:active::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #ff85b8, var(--primary-dark));
+      color: #fff;
+      box-shadow: 0 8px 28px var(--primary-glow);
+      animation: pulseGlow 2.5s ease-in-out infinite;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 14px 40px rgba(255,111,169,0.5);
+      transform: translateY(-4px);
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 8px 28px var(--primary-glow); }
+      50% { box-shadow: 0 12px 40px rgba(255,111,169,0.55); }
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.75);
+      color: var(--primary-dark);
+      border: 2px solid rgba(255,111,169,0.3);
+      font-weight: 700;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.9);
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(255,111,169,0.15);
+    }
+
+    .cta-microcopy {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .cta-microcopy span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cta-microcopy .check {
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    .note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Hero Image Section */
+    .hero-image-section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: sticky;
+      top: 50px;
+    }
+
+    .hero-photo-block {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .hero-photo-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-photo-info {
+      padding: 14px 16px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,0.5);
+    }
+
+    .hero-photo-name {
+      font-size: 1.05rem;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      margin: 0 0 4px;
+    }
+
+    .hero-photo-role {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+
+    .hero-photo-status {
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      background: rgba(34,197,94,0.1);
+      border-radius: 999px;
+      border: 1px solid rgba(34,197,94,0.2);
+    }
+
+    .hero-photo-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: blink 2s infinite;
+      box-shadow: 0 0 6px rgba(34,197,94,0.4);
+    }
+
+
+    /* Mini WhatsApp Mock */
+    .mock-mini {
+      border-radius: var(--radius);
+      padding: 14px;
+      background: #0c1011;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .mock-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 10px;
+    }
+
+    .mock-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+      color: white;
+      box-shadow: 0 2px 8px rgba(255,111,169,0.3);
+    }
+
+    .mock-title {
+      color: #dce5e4;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .mock-subtitle {
+      color: #8a9e94;
+      font-size: 0.7rem;
+    }
+
+    .mock-msg {
+      padding: 8px 12px;
+      border-radius: 14px;
+      font-size: 0.78rem;
+      margin-bottom: 8px;
+      max-width: 92%;
+      line-height: 1.45;
+      animation: msgSlideIn 0.4s ease-out;
+    }
+
+    @keyframes msgSlideIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .mock-msg-in {
+      background: rgba(255,255,255,0.09);
+      color: #e8ecec;
+      border-top-left-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .mock-msg-out {
+      background: linear-gradient(135deg, #1d7a55, #1d5f43);
+      color: #fff;
+      margin-left: auto;
+      border-top-right-radius: 4px;
+    }
+
+    .mock-price {
+      display: inline-block;
+      background: rgba(255,111,169,0.2);
+      color: #ff85b8;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .mock-old-price {
+      text-decoration: line-through;
+      opacity: 0.5;
+      font-size: 0.75rem;
+    }
+
+    .mock-urgency {
+      color: #ff6b6b;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .mock-time {
+      font-size: 0.65rem;
+      opacity: 0.5;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      padding: 16px;
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      text-align: center;
+    }
+
+    .stars {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+
+    .social-proof strong {
+      font-size: 0.85rem;
+      color: var(--text);
+      display: block;
+    }
+
+    .social-proof .sub-text {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      text-align: left;
+    }
+
+    .testimonial-item {
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(255,111,169,0.1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .testimonial-item .t-icon { font-size: 0.9rem; flex-shrink: 0; }
+
+    /* Benefits Row */
+    .benefits-row {
+      display: flex;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .benefit-item {
+      flex: 1;
+      padding: 16px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--panel-2);
+      border: 1px solid rgba(255,255,255,0.3);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(255,111,169,0.12);
+    }
+
+    .benefit-item .icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .benefit-item strong { font-size: 0.85rem; display: block; color: var(--text); font-weight: 700; }
+    .benefit-item span { font-size: 0.72rem; color: var(--muted); }
+
+    /* Floating Toast */
+    .floating-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: rgba(10, 14, 16, 0.94);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+      opacity: 0;
+      z-index: 50;
+      white-space: nowrap;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .floating-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Activity Marquee - compact */
+    .marquee-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      background: linear-gradient(90deg, rgba(255,111,169,0.12), rgba(255,156,196,0.08), rgba(255,111,169,0.12));
+      border-bottom: 1px solid rgba(255,111,169,0.18);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 40px;
+      white-space: nowrap;
+      animation: marquee 25s linear infinite;
+      padding-left: 100%;
+    }
+
+    .marquee-item {
+      font-size: 0.76rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+
+    /* Countdown inline */
+    .countdown-inline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .countdown-inline .label {
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.78rem;
+      background: rgba(255,111,169,0.1);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .countdown-inline .time {
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 1.2rem;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+    }
+
+    .countdown-inline .sep {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .hero-image-section {
+        position: static;
+      }
+
+      .hero-photo-block {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .benefits-row {
+        flex-wrap: wrap;
+      }
+
+      body { overflow: auto; }
+      html, body { height: auto; }
+      .container { height: auto; padding: 44px 16px; }
+    }
+
+    @media (max-width: 560px) {
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .btn { width: 100%; }
+
+      .stats-row {
+        flex-direction: column;
+      }
+
+      .stat-mini { width: 100%; }
+
+      .hero-photo-block {
+        max-width: 100%;
+      }
+
+      h1 { font-size: 1.6rem; }
+
+      .hero-section { padding: 24px 18px; }
+
+      .cta-microcopy {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    /* Body padding for marquee */
+    body { padding-top: 30px; }
+
+    /* Social Proof Section */
+    .social-proof-section {
+      padding: 60px 0 80px;
+    }
+
+    .social-proof-section .container {
+      min-height: auto;
+      height: auto;
+      padding: 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--text);
+      text-align: center;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      text-align: center;
+      margin: 0 0 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Chat Grid */
+    .chat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .chat-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      box-shadow: 0 4px 16px rgba(226, 119, 164, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: fadeInUp 0.5s ease-out backwards;
+    }
+
+    .chat-card:nth-child(1) { animation-delay: 0.1s; }
+    .chat-card:nth-child(2) { animation-delay: 0.2s; }
+    .chat-card:nth-child(3) { animation-delay: 0.3s; }
+    .chat-card:nth-child(4) { animation-delay: 0.4s; }
+    .chat-card:nth-child(5) { animation-delay: 0.5s; }
+    .chat-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .chat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(226, 119, 164, 0.18);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .chat-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .chat-avatar.user {
+      background: linear-gradient(135deg, #1d7a55, #1d5f43);
+    }
+
+    .chat-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .chat-time {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .chat-bubble {
+      background: rgba(255,255,255,0.6);
+      border-radius: 12px;
+      border-top-left-radius: 4px;
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--text);
+      border: 1px solid rgba(255,111,169,0.1);
+    }
+
+    .chat-bubble.user {
+      background: linear-gradient(135deg, #1d7a55, #1d5f43);
+      color: #fff;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 4px;
+      border: none;
+    }
+
+    .chat-urgency {
+      color: #ff4466;
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+
+    .chat-warn {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      opacity: 0.5;
+      font-size: 0.78rem;
+    }
+
+    .new-price {
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .coupon {
+      background: rgba(255,111,169,0.2);
+      color: var(--primary-dark);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* Prints Grid */
+    .prints-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .print-card {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(226, 119, 164, 0.15);
+      border: 1px solid var(--line);
+      background: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .print-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(226, 119, 164, 0.25);
+    }
+
+    .print-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Activity Feed */
+    .activity-feed {
+      margin-top: 16px;
+      padding: 16px;
+      background: rgba(255,255,255,0.5);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,111,169,0.15);
+    }
+
+    .feed-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 12px;
+    }
+
+    .feed-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .feed-card {
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,111,169,0.1);
+    }
+
+    .feed-card.feed-user {
+      background: rgba(29,122,85,0.08);
+      border-color: rgba(29,122,85,0.15);
+    }
+
+    .feed-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .feed-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.7rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .feed-avatar.user {
+      background: linear-gradient(135deg, #1d7a55, #1d5f43);
+    }
+
+    .feed-time {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+
+    .feed-bubble {
+      font-size: 0.72rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .feed-bubble.user {
+      color: #1d5f43;
+      font-style: italic;
+    }
+
+    .feed-urgent {
+      color: #ff4466;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .feed-warn {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+
+    .feed-old {
+      text-decoration: line-through;
+      opacity: 0.5;
+      font-size: 0.7rem;
+    }
+
+    .feed-new {
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    /* Main CTA Block */
+    .main-cta-block {
+      margin-top: 18px;
+      padding: 22px 20px;
+      background: linear-gradient(135deg, rgba(255,111,169,0.12), rgba(255,156,196,0.08));
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,111,169,0.25);
+      text-align: center;
+    }
+
+    .cta-block-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-block-subtitle {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0 0 14px;
+      line-height: 1.45;
+    }
+
+    .cta-block-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 320px;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ff85b8, var(--primary-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 8px 28px var(--primary-glow);
+      transition: all 0.25s ease;
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    .cta-block-btn:hover {
+      box-shadow: 0 14px 40px rgba(255,111,169,0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-block-microcopy {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-block-microcopy span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .cta-block-urgency {
+      font-size: 0.75rem;
+      color: #e63946;
+      font-weight: 700;
+      margin: 8px 0 0;
+    }
+
+    /* Final CTA Section */
+    .cta-final-section {
+      padding: 40px 0 60px;
+    }
+
+    /* Final CTA - Centered */
+    .cta-final-wrapper {
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    .cta-final-box {
+      max-width: 520px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 32px 24px;
+      background: linear-gradient(135deg, rgba(255,111,169,0.12), rgba(255,156,196,0.08));
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,111,169,0.2);
+      box-shadow: 0 20px 60px rgba(255,0,120,0.15);
+    }
+
+    .cta-final-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-final-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0 0 18px;
+      line-height: 1.5;
+    }
+
+    .cta-final-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 320px;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ff85b8, var(--primary-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 8px 28px var(--primary-glow);
+      transition: all 0.25s ease;
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    .cta-final-btn:hover {
+      box-shadow: 0 14px 40px rgba(255,111,169,0.5);
+      transform: translateY(-3px);
+    }
+
+    .cta-final-proof {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .cta-final-proof span {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .cta-final-urgency {
+      font-size: 0.75rem;
+      color: #e63946;
+      font-weight: 700;
+      margin: 10px 0 0;
+    }
+
+    /* Secondary CTA */
+    .secondary-cta {
+      padding: 18px 16px;
+      background: linear-gradient(135deg, rgba(255,111,169,0.12), rgba(255,156,196,0.08));
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,111,169,0.2);
+      text-align: center;
+    }
+
+    .secondary-cta-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 0 4px;
+    }
+
+    .secondary-cta-subtitle {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 0 0 12px;
+      line-height: 1.4;
+    }
+
+    .secondary-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      max-width: 280px;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ff85b8, var(--primary-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.88rem;
+      text-decoration: none;
+      box-shadow: 0 6px 20px var(--primary-glow);
+      transition: all 0.25s ease;
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    .secondary-cta-btn:hover {
+      box-shadow: 0 10px 32px rgba(255,111,169,0.5);
+      transform: translateY(-2px);
+    }
+
+    .secondary-cta-proof {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 12px;
+    }
+
+    .secondary-cta-proof span {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .secondary-cta-urgency {
+      font-size: 0.7rem;
+      color: #e63946;
+      font-weight: 700;
+      margin: 8px 0 0;
+    }
+
+    /* Responsive for Social Proof Section */
+    @media (max-width: 900px) {
+      .chat-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .prints-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-bar {
+        gap: 24px;
+      }
+
+      .stat-number {
+        font-size: 1.2rem;
+      }
+
+      .feed-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .cta-final-section {
+        padding: 24px 0 40px;
+      }
+
+      .cta-final-wrapper {
+        padding: 0 12px;
+      }
+
+      .cta-final-box {
+        padding: 24px 18px;
+      }
+
+      .cta-final-title {
+        font-size: 1.1rem;
+      }
+
+      .cta-final-subtitle {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Marquee Bar -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span class="marquee-item">✨ Ofertas atualizadas diariamente</span>
+      <span class="marquee-item">🟢 Entrada instantânea no WhatsApp</span>
+      <span class="marquee-item">🎁 Cupons exclusivos do grupo</span>
+      <span class="marquee-item">⚡ Promoções que esgotam rápido</span>
+      <span class="marquee-item">💬 Avisos em tempo real</span>
+      <span class="marquee-item">✨ Ofertas atualizadas diariamente</span>
+      <span class="marquee-item">🟢 Entrada instantânea no WhatsApp</span>
+      <span class="marquee-item">🎁 Cupons exclusivos do grupo</span>
+      <span class="marquee-item">⚡ Promoções que esgotam rápido</span>
+      <span class="marquee-item">💬 Avisos em tempo real</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-grid">
+      <!-- Left: Hero Section with Content -->
+      <div class="hero-section glass">
+        <div class="hero-top">
+          <span class="curiosity-badge">👀 Nem todo mundo consegue entrar</span>
+          <span class="badge">🎀 Grupo VIP</span>
+          <span class="urgency-bar">
+            <span class="urgency-dot"></span>
+            <span id="urgenciaTexto">Poucas vagas disponíveis</span>
+          </span>
+        </div>
+
+        <h1>ClickVendas | Achadinhos🥰</h1>
+
+        <p class="lead">Receba promoções, cupons e achadinhos selecionados direto no seu WhatsApp. É grátis e leva 1 clique.</p>
+
+        <p class="sub">Entre agora e garanta acesso às ofertas mais quentes do momento. Vagas limitadas para manter o grupo exclusivo.</p>
+
+        <div class="stats-row">
+          <div class="stat-mini">
+            <strong id="vagasDisplay">17</strong>
+            <span>vagas restantes</span>
+          </div>
+          <div class="stat-mini">
+            <strong>🆓</strong>
+            <span>100% grátis</span>
+          </div>
+          <div class="stat-mini">
+            <strong>⚡</strong>
+            <span>Ofertas diárias</span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" id="ctaPrincipal" href="https://chat.whatsapp.com/JiNCkoxl52zBoQVbT5pvVj" target="_blank" rel="noopener noreferrer">
+            🔥 Liberar acesso às ofertas
+          </a>
+          <a class="btn btn-secondary" id="ctaSecundario" href="https://chat.whatsapp.com/JiNCkoxl52zBoQVbT5pvVj" target="_blank" rel="noopener noreferrer">
+            👀 Entrar no grupo secreto
+          </a>
+        </div>
+
+        <div class="cta-microcopy">
+          <span><span class="check">✔</span> Entrada imediata</span>
+          <span><span class="check">✔</span> Sem spam</span>
+          <span><span class="check">✔</span> Pode sair quando quiser</span>
+        </div>
+
+        <div class="countdown-inline" style="margin-top: 14px;">
+          <span class="label">⏳ novas vagas em:</span>
+          <span class="time" id="minutos">14</span>
+          <span class="sep">:</span>
+          <span class="time" id="segundos">59</span>
+        </div>
+
+        <p class="note" style="margin-top: 12px;">🔒 Seus dados estão seguros. Saia do grupo quando quiser.</p>
+
+        <!-- Main CTA Block -->
+        <div class="main-cta-block">
+          <h3 class="cta-block-title">💖 Entre agora no grupo de achadinhos</h3>
+          <p class="cta-block-subtitle">Receba promoções, cupons e ofertas direto no seu WhatsApp todos os dias</p>
+          <a class="cta-block-btn" href="https://chat.whatsapp.com/JiNCkoxl52zBoQVbT5pvVj" target="_blank" rel="noopener noreferrer">
+            🔥 Quero entrar no grupo agora
+          </a>
+          <div class="cta-block-microcopy">
+            <span>✔️ Entrada imediata</span>
+            <span>✔️ Sem spam</span>
+            <span>✔️ Pode sair quando quiser</span>
+          </div>
+          <p class="cta-block-urgency">⚠️ Vagas limitadas — entra antes que feche</p>
+        </div>
+
+        <!-- Activity Feed Section -->
+        <div class="activity-feed">
+          <h3 class="feed-title">💬 O que está rolando no grupo agora</h3>
+
+          <div class="feed-grid">
+            <!-- Feed Item 1 -->
+            <div class="feed-card">
+              <div class="feed-header">
+                <div class="feed-avatar">M</div>
+                <span class="feed-time">10:32</span>
+              </div>
+              <div class="feed-bubble">
+                <span class="feed-urgent">🔥 SAIU AGORA!</span><br>
+                Vestido midi <span class="feed-old">R$ 189</span> → <span class="feed-new">R$ 79,90</span><br>
+                <span class="feed-warn">⚠️ Últimas 12 peças!</span>
+              </div>
+            </div>
+
+            <!-- Feed Item 2 - User -->
+            <div class="feed-card feed-user">
+              <div class="feed-header">
+                <div class="feed-avatar user">C</div>
+                <span class="feed-time">10:35</span>
+              </div>
+              <div class="feed-bubble user">
+                Oii! Acabei de entrar e já amei as promoções! 😍
+              </div>
+            </div>
+
+            <!-- Feed Item 3 -->
+            <div class="feed-card">
+              <div class="feed-header">
+                <div class="feed-avatar">M</div>
+                <span class="feed-time">11:15</span>
+              </div>
+              <div class="feed-bubble">
+                <span class="feed-urgent">⚡ RELÂMPAGO!</span><br>
+                Kit 3 lingeries <span class="feed-old">R$ 149</span> → <span class="feed-new">R$ 59,90</span><br>
+                <span class="feed-warn">🏃‍♀️ Corre que acaba!</span>
+              </div>
+            </div>
+
+            <!-- Feed Item 4 - User -->
+            <div class="feed-card feed-user">
+              <div class="feed-header">
+                <div class="feed-avatar user">F</div>
+                <span class="feed-time">11:20</span>
+              </div>
+              <div class="feed-bubble user">
+                Vou colocar minhas amigas lá! Esse grupo é viciante 💕
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="benefits-row">
+          <div class="benefit-item">
+            <div class="icon">💰</div>
+            <strong>Descontos Reais</strong>
+            <span>Ofertas verificadas</span>
+          </div>
+          <div class="benefit-item">
+            <div class="icon">⚡</div>
+            <strong>Prioridade</strong>
+            <span>Ofertas em 1º lugar</span>
+          </div>
+          <div class="benefit-item">
+            <div class="icon">🎀</div>
+            <strong>Curadoria</strong>
+            <span>Só o que vale a pena</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Hero Photo + Info + Mock + Social Proof -->
+      <div class="hero-image-section">
+        <!-- Photo Block -->
+        <div class="hero-photo-block">
+          <img src="avatar.jpg" alt="Milena - Curadora de Achadinhos" />
+          <div class="hero-photo-info">
+            <h3 class="hero-photo-name">Milena 💖</h3>
+            <p class="hero-photo-role">Curadora de achadinhos</p>
+            <span class="hero-photo-status"><span class="hero-photo-status-dot"></span> online</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp Mock -->
+        <div class="mock-mini">
+          <div class="mock-header">
+            <div class="mock-avatar">M</div>
+            <div>
+              <div class="mock-title">Achadinhos🥰</div>
+              <div class="mock-subtitle">Grupo VIP • 2.456 membros</div>
+            </div>
+          </div>
+          <div class="mock-msg mock-msg-in">
+            <span class="mock-urgency">🔥 SAIU AGORA!</span><br/>
+            Vestido lindo <span class="mock-old-price">R$ 129</span> → <span class="mock-price">R$ 49,90</span><br/>
+            <span class="mock-urgency">⚠️ Últimas 7 peças!</span>
+            <div class="mock-time">14:32</div>
+          </div>
+          <div class="mock-msg mock-msg-out">
+            Quero! Como compro? 😍
+            <div class="mock-time">14:33</div>
+          </div>
+          <div class="mock-msg mock-msg-in">
+            É só clicar no link! Corre que esgota rápido 💕
+            <div class="mock-time">14:33</div>
+          </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="social-proof">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <strong>2.456 mulheres já estão no grupo</strong>
+          <div class="sub-text">Junte-se a elas agora</div>
+          <div class="testimonials">
+            <div class="testimonial-item">
+              <span class="t-icon">💬</span>
+              <span>"Já economizei muito com esse grupo"</span>
+            </div>
+            <div class="testimonial-item">
+              <span class="t-icon">💬</span>
+              <span>"Sempre tem promoção boa"</span>
+            </div>
+            <div class="testimonial-item">
+              <span class="t-icon">💬</span>
+              <span>"Melhor grupo de achadinhos"</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA - Centered -->
+  <section class="cta-final-section">
+    <div class="cta-final-wrapper">
+      <div class="cta-final-box">
+        <h3 class="cta-final-title">💖 Quer receber isso todos os dias?</h3>
+        <p class="cta-final-subtitle">Entre no grupo agora e comece a aproveitar as melhores ofertas</p>
+        <a class="cta-final-btn" href="https://chat.whatsapp.com/JiNCkoxl52zBoQVbT5pvVj" target="_blank" rel="noopener noreferrer">
+          🔥 Entrar no grupo agora
+        </a>
+        <div class="cta-final-proof">
+          <span>👩‍🦰 +2.456 mulheres já estão no grupo</span>
+          <span>💬 Novas pessoas entram todos os dias</span>
+        </div>
+        <p class="cta-final-urgency">⚠️ Vagas limitadas — o grupo fecha quando lota</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Toast -->
+  <div class="floating-toast" id="toast"></div>
+
+  <script>
+    const CONFIG = {
+      whatsappLink: 'https://chat.whatsapp.com/JiNCkoxl52zBoQVbT5pvVj',
+      vagas: 17,
+      notificacoes: [
+        '🟢 Nova pessoa entrou no grupo agora',
+        '💖 Mais gente entrando no grupo',
+        '🔥 Grupo ativo agora — 3 pessoas online',
+        '✨ Oferta relâmpago publicada há 1min',
+        '🎁 Cupom de frete grátis liberado!'
+      ]
+    };
+
+    // Set WhatsApp links
+    document.querySelectorAll('#ctaPrincipal, #ctaSecundario').forEach(link => {
+      link.href = CONFIG.whatsappLink;
+    });
+
+    // Update vagas display
+    document.getElementById('vagasDisplay').textContent = CONFIG.vagas;
+
+    // Countdown timer
+    let totalSegundos = 14 * 60 + 59;
+    const minutosEl = document.getElementById('minutos');
+    const segundosEl = document.getElementById('segundos');
+
+    setInterval(() => {
+      if (totalSegundos <= 0) {
+        totalSegundos = 14 * 60 + 59;
+      }
+      const min = Math.floor(totalSegundos / 60);
+      const sec = totalSegundos % 60;
+      minutosEl.textContent = String(min).padStart(2, '0');
+      segundosEl.textContent = String(sec).padStart(2, '0');
+      totalSegundos--;
+    }, 1000);
+
+    // Floating toast notifications
+    const toast = document.getElementById('toast');
+    let indiceToast = 0;
+
+    function mostrarToast() {
+      toast.textContent = CONFIG.notificacoes[indiceToast];
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+
+      indiceToast = (indiceToast + 1) % CONFIG.notificacoes.length;
+    }
+
+    setTimeout(mostrarToast, 2500);
+    setInterval(mostrarToast, 6000);
+
+    // Dynamic urgency text
+    const urgenciaTextos = [
+      'Poucas vagas disponíveis',
+      'Últimas vagas do lote',
+      'Grupo quase lotado',
+      'Entrada se encerrando'
+    ];
+    let urgenciaIndex = 0;
+    setInterval(() => {
+      urgenciaIndex = (urgenciaIndex + 1) % urgenciaTextos.length;
+      document.getElementById('urgenciaTexto').textContent = urgenciaTextos[urgenciaIndex];
+    }, 8000);
+
+    // Staggered animation for mock messages on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const msgs = document.querySelectorAll('.mock-msg');
+      msgs.forEach((msg, i) => {
+        msg.style.animationDelay = `${i * 0.2}s`;
+        msg.style.opacity = '0';
+        setTimeout(() => {
+          msg.style.opacity = '1';
+        }, i * 200 + 300);
+      });
+    });
+  </script>
+</body>
+</html>
