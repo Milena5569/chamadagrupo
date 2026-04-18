@@ -593,6 +593,8 @@
       white-space: nowrap;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      max-width: 90%;
+      text-align: center;
     }
 
     .floating-toast.show {
@@ -695,11 +697,20 @@
     }
 
     @media (max-width: 560px) {
+      /* Body padding to avoid elements being cut off */
+      body {
+        padding-bottom: 140px;
+      }
+
       .cta-row {
         flex-direction: column;
       }
 
-      .btn { width: 100%; }
+      .btn {
+        width: 100%;
+        min-height: 48px;
+        font-size: 0.9rem;
+      }
 
       .stats-row {
         flex-direction: column;
@@ -711,13 +722,47 @@
         max-width: 100%;
       }
 
-      h1 { font-size: 1.6rem; }
+      h1 { font-size: 1.5rem; }
 
-      .hero-section { padding: 24px 18px; }
+      .hero-section { padding: 20px 16px; }
 
       .cta-microcopy {
         flex-direction: column;
         gap: 4px;
+      }
+
+      /* Reduce section spacing */
+      .container { padding: 32px 16px; }
+
+      /* Toast position fix - move above CTA */
+      .floating-toast {
+        bottom: 100px;
+        font-size: 0.78rem;
+        padding: 10px 16px;
+      }
+
+      /* Benefits row compact */
+      .benefits-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .benefit-item {
+        padding: 12px;
+      }
+
+      .benefit-item .icon {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+      }
+
+      .benefit-item strong {
+        font-size: 0.8rem;
+      }
+
+      .benefit-item span {
+        font-size: 0.68rem;
       }
     }
 
@@ -1292,7 +1337,7 @@
 
     @media (max-width: 560px) {
       .cta-final-section {
-        padding: 24px 0 40px;
+        padding: 20px 0 30px;
       }
 
       .cta-final-wrapper {
@@ -1300,15 +1345,100 @@
       }
 
       .cta-final-box {
-        padding: 24px 18px;
+        padding: 20px 16px;
       }
 
       .cta-final-title {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
       }
 
       .cta-final-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 14px;
+      }
+
+      .cta-final-btn {
+        min-height: 48px;
+        font-size: 0.9rem;
+      }
+
+      .cta-final-proof span {
+        font-size: 0.72rem;
+      }
+
+      .cta-final-urgency {
+        font-size: 0.68rem;
+        margin-top: 8px;
+      }
+
+      /* Main CTA Block mobile */
+      .main-cta-block {
+        padding: 18px 16px;
+        margin-top: 14px;
+      }
+
+      .cta-block-title {
+        font-size: 0.95rem;
+      }
+
+      .cta-block-subtitle {
+        font-size: 0.78rem;
+        margin-bottom: 12px;
+      }
+
+      .cta-block-btn {
+        min-height: 48px;
+        font-size: 0.9rem;
+      }
+
+      .cta-block-microcopy span {
+        font-size: 0.68rem;
+      }
+
+      .cta-block-urgency {
+        font-size: 0.68rem;
+      }
+
+      /* Activity feed mobile */
+      .activity-feed {
+        padding: 12px;
+        margin-top: 12px;
+      }
+
+      .feed-title {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+      }
+
+      .feed-grid {
+        gap: 8px;
+      }
+
+      .feed-card {
+        padding: 8px;
+      }
+
+      /* Secondary CTA mobile */
+      .secondary-cta {
+        padding: 14px 12px;
+      }
+
+      .secondary-cta-title {
+        font-size: 0.85rem;
+      }
+
+      .secondary-cta-subtitle {
+        font-size: 0.72rem;
+        margin-bottom: 10px;
+      }
+
+      .secondary-cta-btn {
+        min-height: 44px;
         font-size: 0.82rem;
+      }
+
+      .secondary-cta-proof span {
+        font-size: 0.68rem;
       }
     }
   </style>
