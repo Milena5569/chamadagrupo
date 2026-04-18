@@ -671,20 +671,22 @@
       font-weight: 400;
     }
 
-    /* Responsive */
+    /* Responsive - Tablet */
     @media (max-width: 900px) {
       .main-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
       }
 
       .hero-image-section {
         position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
       .hero-photo-block {
-        max-width: 360px;
-        margin: 0 auto;
+        max-width: 100%;
       }
 
       .benefits-row {
@@ -693,76 +695,421 @@
 
       body { overflow: auto; }
       html, body { height: auto; }
-      .container { height: auto; padding: 44px 16px; }
+      .container { height: auto; padding: 32px 16px 48px; }
     }
 
+    /* Mobile - Layout compacto parecido com desktop */
     @media (max-width: 560px) {
-      /* Body padding to avoid elements being cut off */
+      /* Body compacto - menos scroll desnecessário */
       body {
         padding-bottom: 140px;
       }
 
+      .container {
+        padding: 16px 12px 32px;
+      }
+
+      /* Hero section ultra compacta */
+      .hero-section {
+        padding: 14px 12px;
+        border-radius: 14px;
+      }
+
+      /* Badges bem compactos */
+      .hero-top {
+        gap: 4px;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+      }
+
+      .curiosity-badge,
+      .badge,
+      .urgency-bar {
+        font-size: 0.62rem;
+        padding: 3px 8px;
+        gap: 3px;
+      }
+
+      /* Título forte mas mais compacto */
+      h1 {
+        font-size: 1.35rem;
+        margin-bottom: 6px;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      /* Lead e sub bem compactos */
+      .lead {
+        font-size: 0.82rem;
+        margin-bottom: 4px;
+        line-height: 1.45;
+      }
+
+      .sub {
+        font-size: 0.72rem;
+        margin-bottom: 10px;
+      }
+
+      /* Stats row - 2 colunas bem compactas */
+      .stats-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .stat-mini {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+        border-radius: 10px;
+      }
+
+      .stat-mini:nth-child(1) {
+        grid-column: span 2;
+        text-align: center;
+      }
+
+      .stat-mini strong {
+        font-size: 0.95rem;
+      }
+
+      .stat-mini span {
+        font-size: 0.62rem;
+      }
+
+      /* CTA buttons - empilhados mas compactos */
       .cta-row {
         flex-direction: column;
+        gap: 6px;
+        margin-bottom: 8px;
       }
 
       .btn {
         width: 100%;
-        min-height: 48px;
-        font-size: 0.9rem;
+        min-height: 42px;
+        font-size: 0.82rem;
+        border-radius: 999px;
+        padding: 0 16px;
       }
 
-      .stats-row {
-        flex-direction: column;
+      .btn-primary {
+        font-size: 0.85rem;
+        min-height: 44px;
       }
 
-      .stat-mini { width: 100%; }
-
-      .hero-photo-block {
-        max-width: 100%;
-      }
-
-      h1 { font-size: 1.5rem; }
-
-      .hero-section { padding: 20px 16px; }
-
+      /* Microcopy bem compacto */
       .cta-microcopy {
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 6px;
+      }
+
+      .cta-microcopy span {
+        font-size: 0.6rem;
+      }
+
+      /* Countdown inline compacto */
+      .countdown-inline {
+        margin-top: 6px;
+        font-size: 0.68rem;
         gap: 4px;
       }
 
-      /* Reduce section spacing */
-      .container { padding: 32px 16px; }
+      .countdown-inline .time {
+        font-size: 0.9rem;
+      }
 
-      /* Toast position fix - move above CTA */
-      .floating-toast {
-        bottom: 100px;
+      .countdown-inline .label {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+      }
+
+      .note {
+        font-size: 0.62rem;
+        margin-top: 6px;
+      }
+
+      /* Main CTA Block - compacto */
+      .main-cta-block {
+        padding: 12px 10px;
+        margin-top: 8px;
+        border-radius: 12px;
+      }
+
+      .cta-block-title {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+      }
+
+      .cta-block-subtitle {
+        font-size: 0.68rem;
+        margin-bottom: 8px;
+        line-height: 1.35;
+      }
+
+      .cta-block-btn {
+        min-height: 42px;
+        font-size: 0.82rem;
+      }
+
+      .cta-block-microcopy {
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .cta-block-microcopy span {
+        font-size: 0.6rem;
+      }
+
+      .cta-block-urgency {
+        font-size: 0.6rem;
+        margin-top: 4px;
+      }
+
+      /* Activity Feed - ultra compacto */
+      .activity-feed {
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 12px;
+      }
+
+      .feed-title {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+      }
+
+      .feed-grid {
+        gap: 4px;
+      }
+
+      .feed-card {
+        padding: 6px;
+        border-radius: 8px;
+      }
+
+      .feed-avatar {
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
+      }
+
+      .feed-time {
+        font-size: 0.5rem;
+      }
+
+      .feed-bubble {
+        font-size: 0.62rem;
+        line-height: 1.35;
+      }
+
+      .feed-urgent {
+        font-size: 0.62rem;
+      }
+
+      .feed-warn {
+        font-size: 0.55rem;
+      }
+
+      .feed-old, .feed-new {
+        font-size: 0.6rem;
+      }
+
+      /* Hero Image Section - grid 2 colunas bem compacto */
+      .hero-image-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .hero-photo-block {
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .hero-photo-info {
+        padding: 6px 8px;
+      }
+
+      .hero-photo-name {
         font-size: 0.78rem;
-        padding: 10px 16px;
+        margin-bottom: 1px;
       }
 
-      /* Benefits row compact */
-      .benefits-row {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 14px;
-      }
-
-      .benefit-item {
-        padding: 12px;
-      }
-
-      .benefit-item .icon {
-        font-size: 1.3rem;
+      .hero-photo-role {
+        font-size: 0.62rem;
         margin-bottom: 4px;
       }
 
+      .hero-photo-status {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+        gap: 3px;
+      }
+
+      .hero-photo-status-dot {
+        width: 5px;
+        height: 5px;
+      }
+
+      /* Mock WhatsApp - bem compacto */
+      .mock-mini {
+        padding: 8px;
+        border-radius: 12px;
+      }
+
+      .mock-header {
+        gap: 4px;
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+      }
+
+      .mock-avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 0.6rem;
+      }
+
+      .mock-title {
+        font-size: 0.68rem;
+      }
+
+      .mock-subtitle {
+        font-size: 0.55rem;
+      }
+
+      .mock-msg {
+        padding: 5px 8px;
+        font-size: 0.62rem;
+        margin-bottom: 4px;
+        border-radius: 10px;
+      }
+
+      .mock-price {
+        font-size: 0.68rem;
+      }
+
+      .mock-old-price {
+        font-size: 0.58rem;
+      }
+
+      .mock-urgency {
+        font-size: 0.62rem;
+      }
+
+      .mock-time {
+        font-size: 0.48rem;
+        margin-top: 2px;
+      }
+
+      /* Social Proof - compacto */
+      .social-proof {
+        padding: 10px;
+        border-radius: 12px;
+      }
+
+      .stars {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+        letter-spacing: 1px;
+      }
+
+      .social-proof strong {
+        font-size: 0.72rem;
+      }
+
+      .social-proof .sub-text {
+        font-size: 0.62rem;
+        margin-top: 1px;
+      }
+
+      .testimonials {
+        gap: 4px;
+        margin-top: 6px;
+      }
+
+      .testimonial-item {
+        font-size: 0.62rem;
+        padding: 5px 8px;
+        border-radius: 8px;
+        gap: 4px;
+      }
+
+      .testimonial-item .t-icon {
+        font-size: 0.7rem;
+      }
+
+      /* Benefits row - 3 colunas bem compactas */
+      .benefits-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .benefit-item {
+        padding: 8px 4px;
+        border-radius: 10px;
+      }
+
+      .benefit-item .icon {
+        font-size: 1rem;
+        margin-bottom: 2px;
+      }
+
       .benefit-item strong {
-        font-size: 0.8rem;
+        font-size: 0.62rem;
       }
 
       .benefit-item span {
+        font-size: 0.52rem;
+      }
+
+      /* Toast - posição ajustada */
+      .floating-toast {
+        bottom: 100px;
+        font-size: 0.65rem;
+        padding: 6px 12px;
+        max-width: 85%;
+      }
+
+      /* Final CTA Section - compacto */
+      .cta-final-section {
+        padding: 16px 0 24px;
+      }
+
+      .cta-final-wrapper {
+        padding: 0 12px;
+      }
+
+      .cta-final-box {
+        padding: 14px 12px;
+        border-radius: 14px;
+      }
+
+      .cta-final-title {
+        font-size: 0.88rem;
+        margin-bottom: 4px;
+      }
+
+      .cta-final-subtitle {
         font-size: 0.68rem;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      .cta-final-btn {
+        min-height: 42px;
+        font-size: 0.82rem;
+      }
+
+      .cta-final-proof span {
+        font-size: 0.62rem;
+      }
+
+      .cta-final-urgency {
+        font-size: 0.6rem;
+        margin-top: 6px;
       }
     }
 
